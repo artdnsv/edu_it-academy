@@ -23,7 +23,14 @@ try:
         w *= 6.35029
     BMI = int(w / h ** 2)
     print(f'Ваш индекс массы тела: {BMI}')
+    #от 20 до 50
+    BMI_HI = 50
+    BMI_LOW = 20
+    width = 20
+    percent = 0.2
+    x = (BMI - BMI_LOW) / (BMI_HI - BMI_LOW)
+    print('20' + '='*round(x*width) + '|' + '='*round((1-x)*width) + '50')
 except ValueError:
-    print('Неверное значение!')
+    print('Неверное значение! Попробуйте снова')
 
 
